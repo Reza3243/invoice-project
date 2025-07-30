@@ -11,3 +11,6 @@ print(f"{quantity} x {item} = {total} EUR")
 
 with open("invoice.txt", "a") as file:
     file.write(f"{customer},{item},{quantity},{price},{total}\n")
+discount = float(input("Enter discount percentage: "))
+final_total = total - (total * discount / 100)
+print(f"Final total after discount: {final_total} EUR")
